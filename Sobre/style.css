@@ -1,0 +1,78 @@
+#Titulo{
+    border: 10px solid aqua;
+    background-color: rgb(150, 215, 255);
+    transition: 1s;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 1px;
+    font-style: initial;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+}
+#Titulo:hover{
+    border: 15px solid blue;
+    background-color: rgb(224, 4, 4);
+    transition: 1s;
+}
+.conteiner p{
+    font-size: large;
+    font-style: inherit;
+    font-family: 'tahoma';
+    margin-top: 0;
+    padding: 2px;
+}
+#perfil{
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+}
+#linkedin{
+    transition: 1s;
+    height: 80px;
+}
+#linkedin:hover{
+    transition: 1s;
+    height: 90px;
+}
+#git{
+    height: 80px;
+    transition: 1s;
+}
+#git:hover{
+    transition: 1s;
+    height: 90px;
+}
+#Whats{
+    height: 80px;
+    transition: 1s;
+}
+#Whats:hover{
+    transition: 1s;
+    height: 90px;
+}
+body{
+    border: 7px solid blue;
+    background-image: url("/Images/Site.jpg");
+    border-radius: 10px;
+    min-height: 900px;
+}
+#fundo{
+    background-color: aqua;
+    padding: 10px;
+}
+#conteudo ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+#conteudo li a:hover{
+    background-color: blue;
+    color: yellow;
+}
+#expand{
+    background-color: aqua;
+    height: 26vh;
+}

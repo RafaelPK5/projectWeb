@@ -1,0 +1,27 @@
+#conteudo ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2px;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+#conteudo li a:hover{
+    background-color: blue;
+    color: yellow;
+}
+.navbar {
+    color: white;
+    display: flex;
+    padding: 20px;
+}
+body{
+    border: 7px solid blue;
+    background-image: url("/Images/Site.jpg");
+    border-radius: 10px;
+    min-height: 850px;
+}
+#active{
+    background-color: blue;
+}

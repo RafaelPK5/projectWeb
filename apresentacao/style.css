@@ -1,0 +1,69 @@
+#Titulo{
+    border: 10px solid aqua;
+    background-color: rgb(150, 215, 255);
+    transition: 1s;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 1px;
+    font-style: initial;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+}
+#Titulo:hover{
+    border: 15px solid blue;
+    background-color: rgb(224, 4, 4);
+    transition: 1s;
+}
+h1{
+    color: black;
+}
+body{
+    border: 7px solid blue;
+    background-image: url("/Images/Site.jpg");
+    border-radius: 10px;
+    min-height: 850px;
+}
+#content{
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+img{
+    border-radius: 1rem;
+    width: 15%;
+    height: 15%;
+}
+.texto{
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+    background-color: aqua;
+    font-family: 'tahoma';
+}
+#caixa{
+    background-color: aqua;
+    margin: 0;
+}
+#icones{
+    justify-content: center;
+    display: flex;
+    background-color: aqua;
+    border-radius: 10px solid blue;
+}
+.cre{
+    transition: 1s;
+}
+.cre:hover{
+    transition: 1s;
+    width: 320px;
+    height: 320px;
+    justify-content: center;
+    display: flex;
+    padding: 2px;
+}
+#expand{
+    background-color: aqua;
+    height: 13vh;
+}

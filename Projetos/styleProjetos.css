@@ -1,0 +1,15 @@
+#Titulo{
+    border: 10px solid aqua;
+    background-color: rgb(150, 215, 255);
+    transition: 1s;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 1px;
+    font-style: initial;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+}
+#Titulo:hover{
+    border: 15px solid blue;
+    background-color: rgb(224, 4, 4);
+    transition: 1s;
+}
