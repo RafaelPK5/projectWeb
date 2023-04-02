@@ -13,22 +13,24 @@
     background-color: rgb(224, 4, 4);
     transition: 1s;
 }
-#mdCertificados img{
+.mdCertificados img{
     list-style-type: none;
-    height: 250px;
+    height: 15rem;
     margin-top: 10px;
     border-radius: 10px;
     transition: 1s;
     overflow: hidden;
 }
-#mdCertificados img:hover{
+.mdCertificados img:hover{
     transition: 1s;
-    height: 400px;
+    height: 20rem;
 }
 #fundo{
+    display: flex;
+    flex-direction: column;
     padding-top: 10px;
     background-color: aqua;
-    padding-bottom: 60vh;
+    padding-bottom: 5rem;
 }
 #fundo h3{
     margin-left: 20px;

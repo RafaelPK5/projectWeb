@@ -10,11 +10,13 @@
 #conteudo li a:hover{
     background-color: blue;
     color: yellow;
+    
 }
 .navbar {
     color: white;
     display: flex;
     padding: 20px;
+    text-decoration: none;
 }
 body{
     border: 7px solid blue;

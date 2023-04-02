@@ -13,3 +13,31 @@
     background-color: rgb(224, 4, 4);
     transition: 1s;
 }
+#fundo{
+    padding-top: 10px;
+    background-color: aqua;
+    padding-bottom: 45rem;
+}
+#fundo button{
+    background-color: green;
+    color:white;
+    width: 5rem;
+    height: 2rem;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    font-size: medium;
+}
+#fundo button:hover{
+    transition: 250ms;
+    background-color: red;
+}
+#fundo p{
+    margin-left: 1rem;
+    font-size: large;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium';
+}
+#git{
+    color: white;
+    text-decoration: none;
+}

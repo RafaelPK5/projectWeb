@@ -1,12 +1,3 @@
-const java = document.getElementById("java");
-
-const js = document.getElementById("javascript");
-
-const nodejs = document.getElementById("nodejs");
-
-const docker = document.getElementById("docker")
-
-
 
 function interacaojava() {
     document.getElementById("javaContent").innerHTML = "<strong>Procurar evoluir na minha linguagem primária, apesar da dificuldade que é o Java eu gosto bastante da mesma!</strong>"
