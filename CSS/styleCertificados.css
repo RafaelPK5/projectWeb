@@ -1,42 +1,283 @@
-#Titulo{
-    border: 10px solid aqua;
-    background-color: rgb(150, 215, 255);
-    transition: 1s;
-    cursor: pointer;
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
     text-align: center;
-    border-radius: 1px;
-    font-style: initial;
-    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow);
 }
-#Titulo:hover{
-    border: 15px solid blue;
-    background-color: rgb(224, 4, 4);
-    transition: 1s;
+
+nav {
+    background-color: #333;
+    padding: 1rem;
 }
-.mdCertificados img{
-    list-style-type: none;
-    height: 15rem;
-    margin-top: 10px;
-    border-radius: 10px;
-    transition: 1s;
-    overflow: hidden;
-}
-.mdCertificados img:hover{
-    transition: 1s;
-    height: 20rem;
-}
-#fundo{
+
+nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    background-color: aqua;
-    padding-bottom: 5rem;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
-#fundo h3{
-    margin-left: 20px;
-    font-family: 'tahoma';
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
-#fundo ul{
-font-family: 'tahoma';
-font-size: large;
+
+nav a:hover, nav .active {
+    color: #00b4d8;
+}
+
+#certificados {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#certificados h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.certificate-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.certificate-image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificate-card:hover .certificate-overlay {
+    opacity: 1;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.05);
+}
+
+.view-certificate {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.view-certificate:hover {
+    transform: scale(1.1);
+    background: #005b8c;
+}
+
+.certificate-content {
+    padding: 1.5rem;
+}
+
+.certificate-content h3 {
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.instructor, .platform {
+    color: #666;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.description {
+    margin: 1rem 0;
+    color: #444;
+}
+
+.certificate-details {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.certificate-details span {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .certificate-content {
+        padding: 1rem;
+    }
+
+    .certificate-details {
+        justify-content: center;
+    }
+
+    .certificate-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .view-certificate {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .certificate-image {
+        height: 250px;
+    }
+
+    .certificate-image img {
+        padding: 0.5rem;
+    }
+}
+
+/* Estilos do Modal */
+.certificate-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
 }

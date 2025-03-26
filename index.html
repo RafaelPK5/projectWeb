@@ -1,34 +1,101 @@
 <!DOCTYPE html>
-<html >
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Web - Rafael</title>
     <link rel="stylesheet" href="./CSS/styleApre.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="./JS/home.js"></script>
 </head>
 <body>
-    <div id="Titulo">
+    <header class="animate__animated animate__fadeIn">
         <h1>Portfólio Web</h1>
-    </div>
-    <div id="conteudo"> <ul>
-        <li><a id="active" class="navbar" href="./index.html">Home</a></li>
-        <li><a class="navbar" href="./indexSobre.html">Sobre</a></li>
-        <li><a class="navbar" href="./indexProjetos.html">Projetos</a></li>
-        <li><a class="navbar" href="EXP">Experiencia Profissional</a>  </li>
-        <li><a class="navbar" href="./indexCertificados.html">Certificados</a></li>
-        <li><a class="navbar" href="./indexPL.html">Planejamentos Fututros</a></li>
-        </ul>
-        </div>
-            <div id="caixa">
-            <h2 class="texto"><strong>Olá sou o Rafael, seja bem vindo ao meu Portfólio Web!</strong></h2></div>
-            <div id="content"><img src="./Images/Perfil.jpg" alt=""></div>
-            <h3 class="texto">Sou estudante de Análise e desenvolvimento de sistemas, me especializando no Back-End!</h3>
-            <h3 class="texto">Fique a vontade para ver mais, espero que goste do meu perfil!</h3>
-        </div>
-        <div id="icones">
-            <img class="cre" src="./Images/java.png" alt="">
-            <img class="cre" src="./Images/JS.png" alt="">
-            <img class="cre" src="./Images/NodeJS.png" alt="">
-            <img class="cre" src="./Images/Docker.png" alt="">
-        </div>
-        <div id="expand"></div>
+    </header>
+    
+    <div id="navbar-placeholder"></div>
+    
+    <main>
+        <section id="apresentacao" class="animate__animated animate__fadeInUp">
+            <div class="hero-section">
+                <img src="./Images/Perfil 2.jpg" alt="Foto de Rafael" class="profile-image">
+                <div class="hero-content">
+                    <h2><strong>Olá, sou o Rafael!</strong></h2>
+                    <p class="typing-text">Desenvolvedor Full-Stack em formação</p>
+                    <div class="social-links">
+                        <a href="https://github.com/RafaelPK5" target="_blank" class="social-btn">
+                            <img src="./Images/Git.png" alt="GitHub">
+                        </a>
+                        <a href="https://www.linkedin.com/in/rafael-santana-669a601a1/" target="_blank" class="social-btn">
+                            <img src="./Images/Linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://wa.me/5511963408352" target="_blank" class="social-btn">
+                            <img src="./Images/Whatsapp.png" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tecnologias" class="animate__animated animate__fadeInUp">
+            <h3>Tecnologias que utilizo:</h3>
+            <div id="icones" class="tech-grid">
+                <div class="tech-card">
+                    <img class="cre" src="./Images/java.png" alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="tech-card">
+                    <img class="cre" src="./Images/JS.png" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-card">
+                    <img class="cre" src="./Images/NodeJS.png" alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-card">
+                    <img class="cre" src="./Images/python.png" alt="Python">
+                    <span>Python</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="destaques" class="animate__animated animate__fadeInUp">
+            <h3>Destaques</h3>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h4>Experiência</h4>
+                    <p>Analista de Planejamento com foco em automação</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>Projetos</h4>
+                    <p>API de Pokédex e Sistema de RH</p>
+                </div>
+                <div class="highlight-card">
+                    <h4>Formação</h4>
+                    <p>Análise e Desenvolvimento de Sistemas</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animate__animated animate__fadeIn">
+        <p>&copy; 2024 Rafael Santana. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        fetch('./components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const links = document.querySelectorAll('.navbar');
+                links.forEach(link => {
+                    if (link.getAttribute('href') === `./${currentPage}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+    </script>
 </body>
 </html>

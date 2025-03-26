@@ -1,28 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Rafael</title>
     <link rel="stylesheet" href="./CSS/styleProjetos.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="./JS/projetos.js"></script>
 </head>
 <body>
-    <div id="Titulo">
+    <header class="animate__animated animate__fadeIn">
         <h1>Projetos</h1>
-    </div>
-    <div id="conteudo"> 
-        <ul>
-            <li><a class="navbar" href="./index.html">Home</a></li>
-            <li><a class="navbar" href="./indexSobre.html">Sobre</a></li>
-            <li><a id="active" class="navbar" href="./indexProjetos.html">Projetos</a></li>
-            <li><a class="navbar" href="EXP">Experiencia Profissional</a>  </li>
-            <li><a class="navbar" href="./indexCertificados.html">Certificados</a></li>
-            <li><a class="navbar" href="./indexPL.html">Planejamentos Fututros</a></li>
-        </ul>
-    </div>
-    <div id="fundo">
-        <button id="poke" class="topicos"><a id="git" href="https://github.com/RafaelPK5/PokkemonAPI">Pokédex</a></button>
-        <p id="pokedesc">- Conheça meu projeto/API de Pokédex em Node.js com conexão a banco de dados SQL e rotas em Express! Capture informações detalhadas dos seus Pokémon preferidos.<br>- Lá você vai encontrar algumas rotas para acessar o banco de dados e encontrar os dados sobre cada pokémon.</p>
-    </div>
+    </header>
+    <div id="navbar-placeholder"></div>
+    <main>
+        <section id="fundo" class="animate__animated animate__fadeInUp">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>Pokédex API</h2>
+                        <div class="project-links">
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">API de Pokédex desenvolvida com Node.js, Express e banco de dados SQL. Permite consultar informações detalhadas sobre Pokémon através de rotas RESTful.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="project-features">
+                            <h3>Funcionalidades:</h3>
+                            <ul>
+                                <li>Consulta de Pokémon por ID ou nome</li>
+                                <li>Listagem de tipos e habilidades</li>
+                                <li>Estatísticas detalhadas</li>
+                                <li>Documentação Swagger</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>Sistema de RH</h2>
+                        <div class="project-links">
+                            <a href="https://github.com/RafaelPK5/Sistema-RH" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://rafaelpk5.github.io/Sistema-RH/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema de RH</h3>
+                        <p>Sistema de gestão de recursos humanos com funcionalidades de cadastro de funcionários, controle de férias e folha de pagamento.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">XAMPP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">E-mail Template</span>
+                        </div>
+                        <div class="project-features">
+                            <h3>Funcionalidades:</h3>
+                            <ul>
+                                <li>Gerenciamento de funcionarios e departamentos</li>
+                                <li>Avaliação de desempenho de equipes baseada em notas diversas</li>
+                                <li>geração de relat´roios e graficos detalhados</li>
+                                <li>Interface gráfica para controle do processo</li>
+                                <li>Tratamento de erros e banco de dados robusto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>Validador de WhatsApp</h2>
+                        <div class="project-links">
+                            <a href="#" class="private-project">
+                                <i class="fas fa-lock"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">Sistema de automação que valida números de telefone em uma base de dados, verificando se possuem WhatsApp ativo. Processa arquivos CSV com números e gera relatórios de validação.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">WhatsApp Web</span>
+                        </div>
+                        <div class="project-features">
+                            <h3>Funcionalidades:</h3>
+                            <ul>
+                                <li>Leitura de arquivos CSV com números de telefone</li>
+                                <li>Automação do WhatsApp Web para validação</li>
+                                <li>Geração de relatórios com resultados</li>
+                                <li>Interface gráfica para controle do processo</li>
+                                <li>Tratamento de erros e retentativas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animate__animated animate__fadeIn">
+        <p>&copy; 2024 Rafael Santana. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        fetch('./components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const links = document.querySelectorAll('.navbar');
+                links.forEach(link => {
+                    if (link.getAttribute('href') === `./${currentPage}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+    </script>
 </body>
 </html>

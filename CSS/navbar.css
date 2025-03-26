@@ -1,29 +1,29 @@
-#conteudo ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 2px;
-    overflow: hidden;
-    background-color: black;
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
-#conteudo li a:hover{
-    background-color: blue;
-    color: yellow;
-    
-}
-.navbar {
+
+nav a {
     color: white;
-    display: flex;
-    padding: 20px;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
-body{
-    border: 7px solid blue;
-    background-image: url("./Site.jpg");
-    border-radius: 10px;
-    min-height: 850px;
+
+nav a:hover {
+    color: #00b4d8;
 }
-#active{
-    background-color: blue;
+
+nav .active {
+    color: #00b4d8;
+    font-weight: bold;
 }

@@ -1,28 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados - Rafael</title>
     <link rel="stylesheet" href="./CSS/styleCertificados.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="./JS/certificados.js"></script>
 </head>
 <body>
-    <div id="Titulo">
-    <h1>Certificados</h1>
-</div>
-    <div id="conteudo">
-        <ul>
-        <li><a class="navbar" href="./index.html">Home</a></li>
-        <li><a class="navbar" href="./indexSobre.html">Sobre</a></li>
-        <li><a class="navbar" href="./indexProjetos.html">Projetos</a></li>
-        <li><a class="navbar" href="EXP">Experiencia Profissional</a>  </li>
-        <li><a id="active" class="navbar" href="./indexCertificados.html">Certificados</a></li>
-        <li><a class="navbar" href="./indexPL.html">Planejamentos Fututros</a></li>
-        </ul>
-    </div>
-    <div id="fundo">
-        <h3>Meus Certificados</h3>
-     <ul class="mdCertificados"><img src="./Images/Certificados/Java Udemy.jpg" align="left"><br><strong><p>-Meu certificado de programação orientada a objetos, na Udemy com o Professor Nélio Alves!<br>-Bem didático e foi meio que meu início na programação, fiz ele para aprender mais pois estava com Java + POO na Faculdade!</strong></p></ul>
-     <ul class="mdCertificados"><img src="./Images/Certificados/TypeScript Udemy.jpg" align="left"><br><strong><p>-Meu certificado de JavaScript e TypeScript, na Udemy com o Professor Luiz Otávio Miranda!<br>-Desafio novíssimo pra mim, bem extenso o conteúdo, porém ele ensinou muito bem e um pouco de tudo.<br>-Com ele me inspirei em estudar mais sobre o node.js e me tornar back-end de vez.</strong></p></ul>
-    </div>
-    
-    </body>
+    <header class="animate__animated animate__fadeIn">
+        <h1>Certificados</h1>
+    </header>
+
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section id="certificados" class="animate__animated animate__fadeInUp">
+            <h2>Meus Certificados</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="./Images/Certificados/Java.jpg" alt="Certificado de Java - Udemy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate" onclick="viewCertificate('./Images/Certificados/Java.jpg')">Ver Certificado</button>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Programação Orientada a Objetos</h3>
+                        <p class="instructor">Instrutor: Nélio Alves</p>
+                        <p class="platform">Plataforma: Udemy</p>
+                        <p class="description">Bem didático, foi meu início na programação. Fiz para aprender mais sobre Java e POO, que estava estudando na faculdade.</p>
+                        <div class="certificate-details">
+                            <span class="date">2023</span>
+                            <span class="duration">40 horas</span>
+                            <span class="level">Intermediário</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="./Images/Certificados/JavaScript.jpg" alt="Certificado de JavaScript e TypeScript - Udemy">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate" onclick="viewCertificate('./Images/Certificados/JavaScript.jpg')">Ver Certificado</button>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>JavaScript e TypeScript</h3>
+                        <p class="instructor">Instrutor: Luiz Otávio Miranda</p>
+                        <p class="platform">Plataforma: Udemy</p>
+                        <p class="description">Um desafio novo e extenso. Aprendi muito, desde o básico até Node.js, o que me inspirou a focar em Back-End.</p>
+                        <div class="certificate-details">
+                            <span class="date">2023</span>
+                            <span class="duration">60 horas</span>
+                            <span class="level">Avançado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="./Images/Certificados/Docker.jpg" alt="Certificado Docker">
+                        <div class="certificate-overlay">
+                            <button class="view-certificate" onclick="viewCertificate('./Images/Certificados/Docker.jpg')">Ver Certificado</button>
+                        </div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>DevOps Ninja: Docker, Kubernetes e Rancher</h3>
+                        <p class="instructor">Instrutor: Jonathan Dias Baraldi</p>
+                        <p class="platform">Plataforma: Udemy</p>
+                        <p class="description">
+                            Curso completo sobre containerização e orquestração de containers, abrangendo Docker, Kubernetes e Rancher. 
+                            Aprenda a criar, gerenciar e escalar aplicações containerizadas, implementar CI/CD e dominar as melhores práticas de DevOps.
+                        </p>
+                        <div class="certificate-details">
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>Rancher</span>
+                            <span>DevOps</span>
+                            <span>Containers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animate__animated animate__fadeIn">
+        <p>&copy; 2024 Rafael Santana. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        fetch('./components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const links = document.querySelectorAll('.navbar');
+                links.forEach(link => {
+                    if (link.getAttribute('href') === `./${currentPage}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+    </script>
+</body>
 </html>

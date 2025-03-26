@@ -1,40 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamentos Futuros - Rafael</title>
     <link rel="stylesheet" href="./CSS/navbar.css">
     <link rel="stylesheet" href="./CSS/stylePL.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="Titulo">
+    <header class="animate__animated animate__fadeIn">
         <h1>Planejamentos Futuros</h1>
-    </div>
-    <div id="conteudo"> <ul>
-        <li><a class="navbar" href="./index.html">Home</a></li>
-        <li><a class="navbar" href="./indexSobre.html">Sobre</a></li>
-        <li><a class="navbar" href="./indexProjetos.html">Projetos</a></li>
-        <li><a class="navbar" href="EXP">Experiencia Profissional</a>  </li>
-        <li><a class="navbar" href="./indexCertificados.html">Certificados</a></li>
-        <li><a id="active" class="navbar" href="./indexPL.html">Planejamentos Fututros</a></li>
-        </ul></div>
-        
-        <div id="fundo">
-            <h2>Tópicos</h2>
-            <button onclick="interacaojava()" href="" id="java">- Java</button>
-            <p id="javaContent"></p><br>
-            <button onclick="interacaojs()" href="" id="javascript">- JavaScript</button>
-            <p id="jsContent"></p><br>
-            <button onclick="interacaoNode()" href="" id="nodejs">- NodeJS</button>
-            <p id="nodeContent"></p><br>
-            <button onclick="interacaodocker()" href="" id="docker">- docker</button>
-            <p id="dockerContent"></p><br>
-        </div>
+    </header>
+    <div id="navbar-placeholder"></div>
+    <main>
+        <section id="fundo" class="animate__animated animate__fadeInUp">
+            <div class="topics-container">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <i class="fas fa-database"></i>
+                        <h2>SQL</h2>
+                    </div>
+                    <div class="topic-content">
+                        <div class="content-wrapper">
+                            <h3>Objetivos de Aprendizado</h3>
+                            <ul>
+                                <li>Queries Complexas e Otimização</li>
+                                <li>Stored Procedures e Functions</li>
+                                <li>Índices e Performance</li>
+                                <li>Normalização e Modelagem</li>
+                                <li>PostgreSQL e MySQL Avançado</li>
+                            </ul>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 35%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <i class="fab fa-python"></i>
+                        <h2>Python</h2>
+                    </div>
+                    <div class="topic-content">
+                        <div class="content-wrapper">
+                            <h3>Objetivos de Aprendizado</h3>
+                            <ul>
+                                <li>Django e Flask</li>
+                                <li>Data Science e Machine Learning</li>
+                                <li>Automação e Scripts</li>
+                                <li>APIs RESTful</li>
+                                <li>Testes com Pytest</li>
+                            </ul>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <i class="fab fa-java"></i>
+                        <h2>Java</h2>
+                    </div>
+                    <div class="topic-content">
+                        <div class="content-wrapper">
+                            <h3>Objetivos de Aprendizado</h3>
+                            <ul>
+                                <li>Programação Orientada a Objetos Avançada</li>
+                                <li>Spring Framework e Spring Boot</li>
+                                <li>Microserviços com Java</li>
+                                <li>Testes Unitários e de Integração</li>
+                                <li>Design Patterns</li>
+                            </ul>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <i class="fab fa-js"></i>
+                        <h2>JavaScript</h2>
+                    </div>
+                    <div class="topic-content">
+                        <div class="content-wrapper">
+                            <h3>Objetivos de Aprendizado</h3>
+                            <ul>
+                                <li>ES6+ e Modern JavaScript</li>
+                                <li>React e Next.js</li>
+                                <li>TypeScript</li>
+                                <li>Testes com Jest</li>
+                                <li>Performance e Otimização</li>
+                            </ul>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <i class="fab fa-node-js"></i>
+                        <h2>Node.js</h2>
+                    </div>
+                    <div class="topic-content">
+                        <div class="content-wrapper">
+                            <h3>Objetivos de Aprendizado</h3>
+                            <ul>
+                                <li>APIs RESTful e GraphQL</li>
+                                <li>Express.js e NestJS</li>
+                                <li>MongoDB e PostgreSQL</li>
+                                <li>Autenticação e Segurança</li>
+                                <li>Deploy e CI/CD</li>
+                            </ul>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <i class="fab fa-docker"></i>
+                        <h2>Docker</h2>
+                    </div>
+                    <div class="topic-content">
+                        <div class="content-wrapper">
+                            <h3>Objetivos de Aprendizado</h3>
+                            <ul>
+                                <li>Containerização de Aplicações</li>
+                                <li>Docker Compose</li>
+                                <li>Kubernetes</li>
+                                <li>Orquestração de Containers</li>
+                                <li>DevOps e CI/CD</li>
+                            </ul>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <footer class="animate__animated animate__fadeIn">
+        <p>&copy; 2024 Rafael Santana. Todos os direitos reservados.</p>
+    </footer>
 
-        <script src="./JS/planejamentos.JS"></script>
+    <script>
+        fetch('./components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const links = document.querySelectorAll('.navbar');
+                links.forEach(link => {
+                    if (link.getAttribute('href') === `./${currentPage}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+    </script>
+    <script src="./JS/planejamentos.JS"></script>
 </body>
 </html>

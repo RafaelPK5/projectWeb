@@ -1,31 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Rafael</title>
     <link rel="stylesheet" href="./CSS/styleSobre.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="./JS/sobre.js"></script>
 </head>
 <body>
-    <div id="Titulo">
+    <header class="animate__animated animate__fadeIn">
         <h1>Sobre Mim</h1>
-    </div>
-    <div id="conteudo"> <ul>
-        <li><a class="navbar" href="./index.html">Home</a></li>
-        <li><a id="active" class="navbar" href="./indexSobre.html">Sobre</a></li>
-        <li><a class="navbar" href="./indexProjetos.html">Projetos</a></li>
-        <li><a class="navbar" href="EXP">Experiencia Profissional</a>  </li>
-        <li><a class="navbar" href="./indexCertificados.html">Certificados</a></li>
-        <li><a class="navbar" href="./indexPL.html">Planejamentos Fututros</a></li>
-            </ul></div>
-    <div id="fundo">
-    <div class="conteiner">
-        <h2>Pessoal</h2>
-        <p>Me chamo Rafael Santana, estudo informática desde os 13 anos, desde cursos de montagem e manutenção de computadores até programação básica com Scratch! Sou apaixonado por tecnologia e tenho bastante afinidade com o mesmo.</p>
-        <p>Tenho 23 anos, estou cursando faculdade de Análise e Desenvolvimento de Sistemas na Curzeiro Do Sul!</p>
-        <p>Busco sempre estar em evolução quanto ao meu conhecimento! Estudei Java na faculdade, ultimamente venho estudando JavaScript junto com NodeJS como mostrado na Aba principal deste Portfólio e nesse meio tempo também aprendi um pouco sobre Docker!</p>
-        <p>Sei que não tenho muita experiência, porém compenso isso no meu esforço e dedicação!</p>
-        <p><img id="perfil" src="./Images/Perfil 2.jpg" alt="" align="left"><br>-Nome: Rafael Fernando Teixeira Santana <br>-Idade: 23 anos<br>-Nasci na Paraíba porém moro em SP há 5 anos<br>-Email: contato.rafaelsantana@gmail.com <br>-Vila Taquari, São Paulo.<br><br>
-   <a href="https://www.linkedin.com/in/rafael-santana-669a601a1/"><img id="linkedin" src="./Images/Linkedin.png" alt=""></a>     <a href="https://github.com/RafaelPK5"><img id="git" src="./Images/Git.png" alt=""></a>     <a href="https://wa.me/5511963408352"><img id="Whats" src="./Images/Whatsapp.png" alt=""></a></p></div>
-   <div id="expand"></div>
-</div>
+    </header>
+
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section id="biografia" class="animate__animated animate__fadeInUp">
+            <div class="container">
+                <div class="bio-content">
+                    <img src="./Images/Perfil 2.jpg" alt="Foto de Rafael" class="bio-image">
+                    <div class="bio-text">
+                        <h2>Olá, sou o Rafael!</h2>
+                        <p>Desenvolvedor Full-Stack em formação, apaixonado por tecnologia e inovação. Atualmente, estou focado em expandir meus conhecimentos em desenvolvimento web e automação de processos.</p>
+                        <div class="bio-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>São Paulo, SP</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Análise e Desenvolvimento de Sistemas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Analista de Planejamento</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="animate__animated animate__fadeInUp">
+            <div class="container">
+                <h2>Minhas Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Back-End</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>Java</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Node.js</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Python</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Front-End</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>HTML/CSS</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>JavaScript</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>TypeScript</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Banco de Dados</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span>MySQL</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>MongoDB</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>PostgreSQL</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="animate__animated animate__fadeInUp">
+            <div class="container">
+                <h2>Experiência Profissional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Analista de Planejamento</h3>
+                            <p class="company">Empresa Atual</p>
+                            <p class="period">2023 - Presente</p>
+                            <ul>
+                                <li>Desenvolvimento de automações para processos internos</li>
+                                <li>Análise e otimização de fluxos de trabalho</li>
+                                <li>Implementação de soluções tecnológicas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Estagiário de Desenvolvimento</h3>
+                            <p class="company">Empresa Anterior</p>
+                            <p class="period">2022 - 2023</p>
+                            <ul>
+                                <li>Desenvolvimento de aplicações web</li>
+                                <li>Manutenção de sistemas existentes</li>
+                                <li>Participação em projetos de equipe</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="objetivos" class="animate__animated animate__fadeInUp">
+            <div class="container">
+                <h2>Meus Objetivos</h2>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Desenvolvimento Full-Stack</h3>
+                        <p>Aprimorar minhas habilidades em desenvolvimento web completo, desde o front-end até o back-end.</p>
+                    </div>
+                    <div class="goal-card">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud Computing</h3>
+                        <p>Adquirir conhecimentos em serviços cloud e arquiteturas distribuídas.</p>
+                    </div>
+                    <div class="goal-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Desenvolvimento Mobile</h3>
+                        <p>Expandir para desenvolvimento de aplicativos móveis.</p>
+                    </div>
+                    <div class="goal-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Liderança Técnica</h3>
+                        <p>Desenvolver habilidades de liderança e gestão de equipes de desenvolvimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animate__animated animate__fadeIn">
+        <p>&copy; 2024 Rafael Santana. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        fetch('./components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const links = document.querySelectorAll('.navbar');
+                links.forEach(link => {
+                    if (link.getAttribute('href') === `./${currentPage}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+    </script>
 </body>
 </html>
